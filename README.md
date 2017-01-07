@@ -1,4 +1,8 @@
-# README
+# housekeeping
+
+https://travis-ci.org/lucasvmiguel/housekeeping.svg?branch=master
+
+https://docs.docker.com/compose/rails/
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
