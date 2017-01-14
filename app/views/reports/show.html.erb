@@ -1,0 +1,7 @@
+<% if @report.type == "1" %>
+    <%= render 'extract_report', result: @report.result %>
+<% end %>
+<% if @report.type == "2" %>
+    <%= render 'summary_report', result: @report.result %>
+<% end %>
+<%= link_to 'Back', reports_path %>

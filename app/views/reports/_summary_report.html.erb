@@ -1,0 +1,21 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Sum</th>
+      <th>Owns</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% unless result.empty? %>
+      <% result.each do |r| %>
+        <tr>
+          <td><%= r[0].name %></td>
+          <td><%= r[1].sum %></td>
+          <td><%= r[1].avg %></td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>

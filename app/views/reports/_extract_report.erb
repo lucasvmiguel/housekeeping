@@ -1,0 +1,25 @@
+<h1>Bills</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Payer</th>
+      <th>When payed</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% unless result.empty? %>
+      <% result.each do |r| %>
+        <tr>
+          <td><%= r.name %></td>
+          <td><%= r.user.name if r.user %></td>
+          <td><%= r.when_payed %></td>
+          <td><%= r.amount %></td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,22 @@
+<h1>Generate Report</h1>
+
+<%= form_tag(controller: "reports", action: "index") do %>
+  <div class="field">
+    <%= label_tag(:report_type, "Report type:")%>
+    <%= select_tag(:report_type, options_for_select(@reports, @report_selected)) %>
+  </div>
+
+  <div class="field">
+    <%= label_tag(:begin_range, "Begin range:")%>
+    <%= select_date @begin_range, prefix: :begin_range %>
+  </div>
+
+  <div class="field">
+    <%= label_tag(:begin_range, "End range:")%>
+    <%= select_date @end_range, prefix: :end_range %>
+  </div>
+
+  <div class="actions">
+    <%= submit_tag "Generate" %>
+  </div>
+<% end %>
